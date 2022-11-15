@@ -1,11 +1,12 @@
-import { CoffeeList } from "./components/CoffeeList";
-import { Introduction } from "./components/Introduction";
+import { CoffeeList } from './components/CoffeeList'
+import { Introduction } from './components/Introduction'
+import { HomeContainer } from './styles'
 
-export function HomePage() {
+export function Home() {
   return (
-    <div>
-        <Introduction/>
-        <CoffeeList/>
-    </div>
-  );
+    <HomeContainer>
+      <Introduction />
+      <CoffeeList />
+    </HomeContainer>
+  )
 }

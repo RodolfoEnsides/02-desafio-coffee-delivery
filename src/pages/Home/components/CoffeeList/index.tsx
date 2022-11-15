@@ -1,6 +1,3 @@
 export function CoffeeList() {
-    return (
-      <h1>Lista de cafés</h1>
-    );
-  }
-  
+  return <h1>Lista de cafés</h1>
+}

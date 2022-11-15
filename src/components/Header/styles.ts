@@ -1,10 +1,10 @@
-import styled, { css } from "styled-components";
+import styled, { css } from 'styled-components'
 
 export const HeaderContainer = styled.header`
   width: 100%;
   height: 6.5rem;
 
-  background: ${({ theme }) => theme.colors["base-background"]};
+  background: ${({ theme }) => theme.colors['base-background']};
 
   display: flex;
   align-items: center;
@@ -21,17 +21,17 @@ export const HeaderContainer = styled.header`
     align-items: center;
     justify-content: space-between;
   }
-`;
+`
 
 export const HeaderButtonsContainer = styled.div`
   display: flex;
   align-items: center;
 
   gap: 0.75rem;
-`;
+`
 
 interface HeaderButtonProps {
-  variantBackground: "purple" | "yellow";
+  variantBackground: 'purple' | 'yellow'
 }
 
 export const HeaderButton = styled.button<HeaderButtonProps>`
@@ -58,32 +58,34 @@ export const HeaderButton = styled.button<HeaderButtonProps>`
     border-radius: 50%;
     top: calc(-1.25rem / 2);
     right: calc(-1.25rem / 2);
-    color: ${({ theme }) => theme.colors["base-white"]};
+    color: ${({ theme }) => theme.colors['base-white']};
 
     display: flex;
     align-items: center;
     justify-content: center;
-    
+
     font-size: 0.75rem;
     font-weight: 700;
   }
 
-  font-size: ${({ theme }) => theme.textSizes["text-regular-s"]};
+  font-size: ${({ theme }) => theme.textSizes['text-regular-s']};
 
   ${({ variantBackground }) => css`
-    background: ${({ theme }) => theme.colors[`brand-${variantBackground}-light`]};
+    background: ${({ theme }) =>
+      theme.colors[`brand-${variantBackground}-light`]};
     color: ${({ theme }) => theme.colors[`brand-${variantBackground}-dark`]};
 
     span {
-      background: ${({ theme }) => theme.colors[`brand-${variantBackground}-dark`]};
+      background: ${({ theme }) =>
+        theme.colors[`brand-${variantBackground}-dark`]};
     }
   `}
 
   ${({ variantBackground }) =>
-    variantBackground === "purple" &&
+    variantBackground === 'purple' &&
     css`
       svg {
         color: ${({ theme }) => theme.colors[`brand-${variantBackground}`]};
       }
     `}
-`;
+`
