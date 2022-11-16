@@ -31,7 +31,7 @@ export function CardCoffees({ coffee }: CoffeeProps) {
   const formattedPrice = formatToMoney(coffee.price)
   return (
     <CardCoffeesContainer>
-      <img src={coffee.imagePath} />
+      <img src={coffee.imagePath} alt="" />
 
       <Tags>
         {coffee.tags.map((tag) => (
